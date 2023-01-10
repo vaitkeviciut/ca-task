@@ -1,0 +1,951 @@
+@mixin xxxxl {
+    @media (max-width: 1719px) {
+        @content;
+    }
+}
+@mixin xxxl {
+    @media (max-width: 1589px) {
+        @content;
+    }
+}
+@mixin xxl {
+    @media (max-width: 1499px) {
+        @content;
+    }
+}
+@mixin xl {
+    @media (max-width: 1389px) {
+        @content;
+    }
+}
+@mixin l {
+    @media (max-width: 1239px) {
+        @content;
+    }
+}
+@mixin lm {
+    @media (max-width: 1099px) {
+        @content;
+    }
+}
+@mixin m {
+    @media (max-width: 959px) {
+        @content;
+    }
+}
+@mixin md {
+    @media (max-width: 739px) {
+        @content;
+    }
+}
+@mixin ms {
+    @media (max-width: 679px) {
+        @content;
+    }
+}
+@mixin s {
+    @media (max-width: 569px) {
+        @content;
+    }
+}
+@mixin xs {
+    @media (max-width: 459px) {
+        @content;
+    }
+}
+@mixin xxs {
+    @media (max-width: 409px) {
+        @content;
+    }
+}
+@mixin xxxs {
+    @media (max-width: 369px) {
+        @content;
+    }
+}
+@mixin xxxxs {
+    @media (max-width: 349px) {
+        @content;
+    }
+}
+@mixin xxxxxs {
+    @media (max-width: 309px) {
+        @content;
+    }
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: rgb(235, 234, 234);
+}
+
+.container {
+    padding: 5px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.header-container-main {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
+    .header-container {
+        padding: 5px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            .image-wrapper {
+                .logo {
+                    padding: 18px 0;
+                    @include l {
+                        padding-left: 20px;
+                    }
+                }
+            }
+            .main-navigation {
+                @include l {
+                    display: none;
+                }
+
+                ul {
+                    display:flex;
+                }
+                .main-menu {
+                    padding-left: 0;
+                    margin: 0;
+                    align-items: center;
+                    li:nth-child(1) {
+                        padding-left: 0;
+                    }
+                    li:nth-child(9) {
+                        padding-right: 0;
+                    }
+                    li:last-child {
+                        padding-right: 0;
+                        padding-left: 14px;
+                    }
+                    .button-skambinti {
+                        color: white;
+                        font-size: 11px;
+                        font-weight: 600;
+                        font-family: Bw Nista Int,Arial,sans-serif;
+                        text-decoration: none;
+                        letter-spacing: 1px;
+                        background-color: blue;
+                        border: 1px solid blue;
+                        border-radius: 40px;
+                        padding: 14px 40px 12px 40px;
+                        margin-left: 20px;
+                    }
+                    .button-skambinti:hover {
+                        background-color: rgb(59, 59, 250);
+                        border: 1px solid rgb(59, 59, 250);
+                    }
+                    .menu-item {
+                        list-style-type: none;
+                        padding: 30px 14px;
+                        .menu-link {
+                            text-decoration: none;
+                            color: black;
+                            font-family: Bw Nista Int,Arial,sans-serif;
+                            font-size: 14px;
+                            font-weight: 700;
+                        }
+                        .menu-link:hover {
+                            color: rgba(0, 0, 0, 0.7);
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+.main-content-container {
+    font-family: Bw Nista Int,Arial,sans-serif;
+    .hero-box-container {
+        background-color: black;
+        background-image: url(images/decoration-arrows.svg);
+        background-size: 1550px;
+        background-repeat: no-repeat;
+        background-position: 60% 150%;
+        @include ms {
+            background-size: 1200px;
+            background-position: 60% 20%;
+        }
+        @include s {
+            background-size: 1100px;
+            background-position: 60% 20%;
+        }
+        @include xs {
+            background-size: 1000px;
+            background-position: 60% 30%;
+        }
+        @include xxs {
+            background-size: 1000px;
+            background-position: 60% 45%;
+        }
+        @include xxxs {
+            background-size: 900px;
+            background-position: 60% 45%;
+        }
+        @include xxxxxs {
+            background-size: 1000px;
+            background-position: 55% 55%;
+        }
+
+        .hero-box-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 250px;
+            padding-top: 100px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            @include m {
+                gap: 200px;
+            }
+            @include md {
+                gap: 171px;
+            }
+
+            .hero-box-title-wrapper {
+                max-width: 670px;
+                margin-left: 100px;
+                @include m {
+                    margin-left: 70px;
+                }
+                @include md {
+                    margin-left: 50px;
+                }
+                @include xs {
+                    margin-left: 30px;
+                }
+
+                .page-title {
+                    font-size: 100px;
+                    margin-bottom: 23px;
+                    margin-top: 0;
+                    font-family: Bw Gradual,Arial,sans-serif;
+                    color: white;
+                    @include m {
+                        font-size: 90px;
+                    }
+                    @include md {
+                        font-size: 80px;
+                    }
+                    @include ms {
+                        font-size: 70px;
+                        padding-right: 45px;
+                    }
+                    @include s {
+                        font-size: 60px;
+                        padding-right: 45px;
+                    }
+                    @include xs {
+                        font-size: 50px;
+                        padding-right: 35px;
+                    }
+                    @include xxs {
+                        font-size: 45px;
+                        padding-right: 35px;
+                    }
+                    @include xxxs {
+                        font-size: 40px;
+                        padding-right: 35px;
+                    }
+                    @include xxxxs {
+                        font-size: 35px;
+                        padding-right: 35px;
+                    }
+                    @include xxxxxs {
+                        font-size: 30px;
+                        padding-right: 35px;
+                    }
+                }
+                .page-description {
+                    color: white;
+                    font-size: 17px;
+                    line-height: 1.72;
+                    max-width: 370px;
+                    @include ms {
+                        font-size: 16px;
+                    }
+                    @include s {
+                        padding-right: 45px;
+                    }
+                    @include xs {
+                        font-size: 15px;
+                    }
+                    @include xxxxs {
+                        font-size: 14px;
+                    }
+                    @include xxxxxs {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .hero-box-service-wrapper {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 100px;
+                @include md {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                }
+
+                .service-item {
+                    padding: 20px;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    width: 50%;
+                    @include lm {
+                        padding-left: 65px;
+                        padding-right: 65px;
+                    }
+                    @include m {
+                        padding-left: 35px;
+                        padding-right: 35px;
+                    }
+                    @include md {
+                        padding-left: 65px;
+                        padding-right: 65px;
+                        border-left: none;
+                        width: 100%;
+                    }
+                    @include xs {
+                        padding-left: 45px;
+                        padding-right: 45px;
+                    }
+                    @include xxs {
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                    @include xxxxxs {
+                        padding-left: 25px;
+                        padding-right: 25px;
+                    }
+
+                    .service-content-wrapper {
+                        margin-bottom: 40px;
+                        .service-title {
+                            color: white;
+                            font-size: 24px;
+                        }
+                        .service-text {
+                            font-size: 14px;
+                            line-height: 1.74;
+                            color: white;
+                        }
+                    }
+                    .service-button {
+                        color: white;
+                        background-color: blue;
+                        text-decoration: none;
+                        font-size: 10px;
+                        font-weight: 700;
+                        padding: 13px 30px 11px;
+                        border-radius: 20px;
+                        letter-spacing: 1px;
+                    }
+                    .service-button:hover {
+                        background-color: rgb(59, 59, 182);
+                    }
+                }
+                .border {
+                    border-left: 1px solid white;
+                    @include md {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-content-1-container {
+        .main-content-1-wrapper {
+            background-color: white;
+            padding-bottom: 100px;
+            padding-top: 70px;
+            @include xxxxs {
+                padding-bottom: 70px;
+            }
+            .main-content-1-title-wrapper {
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+                @include l {
+                    padding-left: 30px;
+                }
+
+                .main-content-1-header {
+                    font-size: 72px;
+                    @include m {
+                        font-size: 60px;
+                    }
+                    @include md {
+                        font-size: 55px;
+                    }
+                    @include ms {
+                        font-size: 47px;
+                    }
+                    @include s {
+                        font-size: 40px;
+                        margin-right: 45px;
+                    }
+                    @include xxs {
+                        font-size: 35px;
+                        margin-right: 35px;
+                    }
+                    @include xxxs {
+                        font-size: 30px;
+                        margin-right: 35px;
+                    }
+                    @include xxxxxs {
+                        font-size: 25px;
+                        margin-right: 35px;
+                    }
+                }
+            }
+            .main-content-1-facts-wrapper {
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+                display: grid;
+                gap: 60px;
+                @include l {
+                    padding-left: 30px;
+                }
+                @include m {
+                    padding-left: 70px;
+                }
+                @include ms {
+                    width: 80%;
+                }
+                @include s {
+                    width: 85%;
+                    padding-left: 30px;
+                }
+                @include xs {
+                    padding-left: 15px;
+                }
+                @include xxs {
+                    gap: 30px;
+                }
+                @include xxxs {
+                    gap: 30px;
+                }
+                @include xxxxs {
+                    gap: 30px;
+                }
+
+                .main-content-1-facts-description {
+                    font-size: 15px;
+                    line-height: 1.72;
+                    max-width: 460px;
+                    @include s {
+                        font-size: 13px;
+                    }
+                }
+                .main-content-1-facts-list-wrapper {
+                    .main-content-1-facts-list {
+                        list-style-type: none;
+                        padding-left: 0;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 80px;
+                        @include xxs {
+                            row-gap: 55px;
+                            column-gap: 20px;
+                        }
+                        @include xxxs {
+                            gap: 45px;
+                            grid-template-columns: 1fr;
+                        }
+                        @include xxxxs {
+                            gap: 45px;
+                        }
+                        .main-content-1-facts-list-item {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                            @include xxs {
+                                gap: 10px;
+                            }
+                            @include xxxs {
+                                gap: 10px;
+                            }
+                            @include xxxxs {
+                                gap: 10px;
+                            }
+                            .fact-list-value {
+                                font-size: 100px;
+                                font-family: Bw Gradual,Arial,sans-serif;
+                                font-weight: 700;
+                                line-height: 1.14;
+                                @include m {
+                                    font-size: 80px;
+                                }
+                                @include ms {
+                                    font-size: 70px;
+                                }
+                                @include s {
+                                    font-size: 60px;
+                                }
+                                @include xs {
+                                    font-size: 55px;
+                                }
+                                @include xxxxs {
+                                    font-size: 45px;
+                                }
+                            }
+                            .small {
+                                font-size: 72px;
+                                
+                                @include m {
+                                    font-size: 55px;
+                                }
+                                @include md {
+                                    font-size: 48px;
+                                }
+                                @include ms {
+                                    font-size: 45px
+                                }
+                                @include s {
+                                    font-size: 40px
+                                }
+                                @include xs {
+                                    font-size: 40px
+                                }
+                                @include xxxxs {
+                                    font-size: 30px
+                                }
+                            }
+                            .fact-list-description {
+                                font-size: 14px;
+                                font-weight: 700;
+                            }
+                        }
+                        .main-content-1-facts-list-item:last-child {
+                            justify-content: flex-end;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    .main-content-2-container {
+        background-color: #0f02b7;
+        background-image: url(images/decoration-arrows-1.svg);
+        background-repeat: no-repeat;
+        background-size: 850px;
+        background-position: -5% -10%;
+        position: relative;
+        @include xxxxl {
+            background-size: 700px;
+            background-position: 5% 10%;
+        }
+        @include xxxl {
+            background-size: 650px;
+            background-position: 10% 30%;
+        }
+        @include xxl {
+            background-size: 600px;
+            background-position: 10% 60%;
+        }
+        @include xl {
+            background-size: 700px;
+            background-position: 30% -70%;
+        }
+        @include m {
+            background-size: 600px;
+            background-position: 30% 100%;
+        }
+        @include md {
+            background-size: 570px;
+            background-position: 30% 100%;
+        }
+        @include ms {
+            background-size: 570px;
+            background-position: 30% 150%;
+        }
+        @include s {
+            background-size: 520px;
+            background-position: 30% 150%;
+        }
+        @include xs {
+            background-size: 470px;
+            background-position: 30% 80%;
+        }
+        @include xxs {
+            background-size: 450px;
+            background-position: 30% 80%;
+        }
+        @include xxxs {
+            background-size: 430px;
+            background-position: 60% 80%;
+        }
+        @include xxxxxs {
+            background-size: 400px;
+            background-position: 60% 80%;
+        }
+
+        img {
+            position: absolute;
+            bottom: 0px; right: 50px;
+            @include xxxxl {
+                width: 800px;
+            }
+            @include xxxl {
+                width: 700px;
+            }
+            @include xxl {
+                width: 650px;
+            }
+            @include xl {
+                display: none;
+            }
+        }
+        
+
+        .main-content-2-wrapper {
+            padding: 180px 0 140px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            @include l {
+                padding-left: 30px;
+            }
+            @include m {
+                padding-left: 60px;
+            }
+            @include s {
+                padding-left: 45px;
+            }
+            @include xs {
+                padding-top: 120px;
+                padding-left: 35px;
+            }
+            @include xxxs {
+                padding-left: 25px;
+            }
+
+            .main-content-2-text-wrapper {
+                margin-bottom: 40px;
+                .main-content-2-title-wrapper {
+                    .main-content-2-header {
+                        font-size: 72px;
+                        max-width: 500px;
+                        margin: 0;
+                        color: white;
+                        @include md {
+                            font-size: 65px;
+                        }
+                        @include ms {
+                            font-size: 55px;
+                            max-width: 400px;
+                        }
+                        @include s {
+                            font-size: 50px;
+                            max-width: 320px;
+                        }
+                        @include xs {
+                            font-size: 40px;
+                             max-width: 300px;
+                        }
+                        @include xxs {
+                            font-size: 37px;
+                            max-width: 280px;
+                        }
+                        @include xxxs {
+                            font-size: 35px;
+                            max-width: 270px;
+                        }
+                        @include xxxxs {
+                            font-size: 30px;
+                            max-width: 240px;
+                        }
+                    }
+                }
+                .main-content-2-content-wrapper {
+                    max-width: 500px;
+                    line-height: 1.72;
+                    color: white;
+                    @include ms {
+                        padding-right: 50px;
+                    }
+                    @include s {
+                        font-size: 14px;
+                    }
+                    @include xxxs {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .content-2-button {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 10px;
+                letter-spacing: 1px;
+                text-align: center;
+                background-color: white;
+                border: 1px solid white;
+                color: #2118a9;
+                border-radius: 50px;
+                padding: 13px 30px 11px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+            .content-2-button:hover {
+                color: #7c74f1;
+            }
+        }
+    }
+}
+
+
+
+.footer-container {
+    background-color: black;
+    background-image: url(images/footer.svg);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: 90% 100%;
+    @include xxxxl {
+        background-size: 450px;
+        background-position: 95% 95%;
+    }
+    @include xxxl {
+        background-size: 420px;
+        background-position: 95% 85%;
+    }
+    @include xxl {
+        background-size: 420px;
+        background-position: 90% 65%;
+    }
+    @include xl {
+        background-size: 420px;
+        background-position: 85% 55%;
+    }
+    @include m {
+        background-size: 400px;
+        background-position: 85% 60%;
+    }
+    @include ms {
+        background-image: none;
+    }
+
+    .footer-wrapper {
+        padding: 100px 0 100px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+        @include l {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @include m {
+            padding-left: 55px;
+            padding-right: 65px;
+        }
+        @include md {
+            gap: 170px;
+        }
+        @include xxs {
+            padding: 100px 65px 100px 35px;
+        }
+        @include xxxs {
+            padding: 100px 65px 100px 30px;
+        }
+        @include xxxxxs {
+            padding: 100px 65px 100px 25px;
+        }
+
+        .footer-1 {
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            .footer-main-part-wrapper {
+                display: flex;
+                justify-content: space-between;
+                @include s {
+                    flex-direction: column;
+                    gap: 75px;
+                }
+                .lists {
+                    display: flex;
+                    gap: 90px;
+                    @include md {
+                        flex-direction: column;
+                    }
+                    ul.footer-list-1 {
+                        padding-left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        margin: 0;
+                        .footer-list-item {
+                            list-style-type: none;
+                            .footer-list-link {
+                                color: gray;
+                                text-decoration: none;
+                                font-family: Bw Nista Int,Arial,sans-serif;
+                                font-size: 14px;
+                                letter-spacing: 1px;
+                            }
+                            .footer-list-link:hover {
+                                color: white;
+                            }
+                        }
+                        .footer-list-item:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    .footer-list-div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        .city {
+                            color: white;
+                            text-transform: uppercase;
+                            font-family: Bw Nista Int,Arial,sans-serif;
+                            font-size: 11px;
+                            font-weight: 700;
+                            letter-spacing: 1px;
+                        }
+                        ul.footer-list-2 {
+                            padding-left: 0;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                            width: 140px;
+                            margin: 0;
+                            .footer-list-item {
+                                list-style-type: none;
+                                .footer-list-link {
+                                    color: gray;
+                                    text-decoration: none;
+                                    font-family: Bw Nista Int,Arial,sans-serif;
+                                    font-size: 14px;
+                                    letter-spacing: 1px;
+                                }
+                                .footer-list-link:hover {
+                                    color: white;
+                                }
+                            }
+                            .footer-list-item:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .icons-wrapper {
+                    display: flex;
+                    gap: 15px;
+                    .instagram-link {
+                        .media-icon {
+                            fill: gray;
+                        }
+                        .media-icon:hover {
+                            fill: white;
+                        }
+                    }
+                    .facebook-link {
+                        .media-icon {
+                            fill: gray;
+                        }
+                        .media-icon:hover {
+                            fill: white;
+                        }
+                    }
+                    .linkedin-link {
+                        .media-icon {
+                            fill: gray;
+                        }
+                        .media-icon:hover {
+                            fill: white;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-2 {
+            display: flex;
+            gap: 200px;
+            @include m {
+                flex-direction: column;
+                gap: 70px;
+            }
+            .footer-bottom-1 {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .footer-bottom-line {
+                    font-family: Bw Nista Int,Arial,sans-serif;
+                    font-size: 14px;
+                    color: gray;
+                    letter-spacing: 1px;
+                    line-height: 1.7;
+                    @include xs {
+                        font-size: 12px;
+                    }
+                    @include xxxs {
+                        font-size: 10px;
+                    }
+
+                    .kids-link {
+                        text-decoration: none;
+                        color: white;
+                    }
+                    .kids-link:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .footer-bottom-2 {
+                @include m {
+                    order: -5;
+                }
+
+                .footer-list-item {
+                    list-style-type: none;
+                    .footer-list-link {
+                        color: gray;
+                        text-decoration: none;
+                        font-family: Bw Nista Int,Arial,sans-serif;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                    }
+                    .footer-list-link:hover {
+                        color: white;
+                    }
+                }
+                .footer-list-item:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
